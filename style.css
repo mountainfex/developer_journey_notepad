@@ -1,0 +1,358 @@
+body {
+  margin: 10px;
+  padding: 0;
+  background-color: #d699ff;
+  background-image: radial-gradient(
+      at 78% 87%,
+      hsla(284, 63%, 75%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 41% 61%, hsla(340, 67%, 79%, 1) 0px, transparent 50%),
+    radial-gradient(at 5% 58%, hsla(336, 75%, 75%, 1) 0px, transparent 50%),
+    radial-gradient(at 85% 40%, hsla(294, 60%, 75%, 1) 0px, transparent 50%),
+    radial-gradient(at 19% 16%, hsla(177, 62%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 94% 41%, hsla(10, 78%, 68%, 1) 0px, transparent 50%),
+    radial-gradient(at 20% 19%, hsla(183, 85%, 79%, 1) 0px, transparent 50%),
+    radial-gradient(at 10% 13%, hsla(1, 99%, 72%, 1) 0px, transparent 50%);
+  height: 100vh;
+  object-fit: cover;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+  height: 10px;
+  background-color: transparent;
+}
+::-webkit-scrollbar-track-piece {
+  background-color: #eeeeee;
+  -webkit-border-radius: 25px;
+}
+::-webkit-scrollbar-thumb:vertical {
+  height: 10px;
+  background-color: rgb(177, 177, 177);
+  border: 1px solid #eee;
+  -webkit-border-radius: 25px;
+}
+
+.addpadtxt {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.addpadframe {
+  width: 330px;
+  height: 203px;
+  padding: 15px;
+  background-color: #0f182a;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.addframebtn {
+  height: 75px;
+  width: 75px;
+  background-color: #6366f1;
+  border-radius: 50%;
+  border: 1px solid #585bf1;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+}
+.addframebtn:hover {
+  background-color: #5046e5;
+}
+.addframebtn:active {
+  position: relative;
+  top: 1px;
+}
+
+.dnone {
+  display: none;
+}
+
+/* _______________________________________ */
+
+.content {
+  padding: 15px;
+  width: 330px;
+  background-color: #0f182a;
+  border-radius: 8px;
+  position: absolute;
+  z-index: 999;
+  margin-top: 243px;
+}
+
+.content header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 25px 10px;
+  border-bottom: solid 1px #ccc;
+}
+
+.content header img {
+  width: 16px;
+  height: 16px;
+}
+
+.content header img:hover {
+  zoom: 125%;
+}
+
+.close {
+  cursor: pointer;
+}
+
+.content header p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.content form {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.rowtitle {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.rowtitle label {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: rgb(131, 131, 131);
+}
+
+.rowtitle textarea {
+  background-color: #475569;
+  color: white;
+  padding: 10px 0 0 10px;
+  font-family: "Roboto", sans-serif;
+  text-align: justify;
+  height: 30px;
+  border: none;
+  border-radius: 8px;
+  outline: 0;
+  resize: none;
+}
+
+.rowdescription {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.rowdescription label {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: rgb(131, 131, 131);
+}
+
+.rowdescription textarea {
+  background-color: #475569;
+  color: white;
+  padding: 10px;
+  height: 125px;
+  border-radius: 8px;
+  border: none;
+  outline: 0;
+  resize: none;
+  font-family: "Roboto", sans-serif;
+}
+
+textarea:focus {
+  box-shadow: 0 2px 12px 0 rgba(255, 255, 255, 0.16);
+}
+
+.btnadd {
+  width: 307px;
+  height: 45px;
+  background-color: rgb(99, 102, 241);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.btnadd:active {
+  position: relative;
+  top: 1px;
+}
+
+.btnadd:hover {
+  background-color: #5046e5;
+  cursor: pointer;
+  transition-duration: 0.15s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* _______________________________________ */
+
+.wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.addednote {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.detailsframe {
+  width: 330px;
+  height: 203px;
+  padding: 15px;
+  background-color: #0f182a;
+  border-radius: 8px;
+}
+
+.contain {
+  color: white;
+  width: 330px;
+  height: 226px;
+  max-height: 175px;
+  overflow-y: auto;
+}
+
+.contain p {
+  font-weight: 500;
+}
+
+.contain span {
+  font-weight: 300;
+  color: rgb(129, 129, 129);
+}
+
+.contain::-webkit-scrollbar {
+  width: 0px;
+}
+
+.contain:hover::-webkit-scrollbar {
+  background: #f1f1f1;
+  width: 5px;
+  height: 10%;
+  border-radius: 25px;
+}
+
+.contain:hover::-webkit-scrollbar-thumb {
+  background: rgb(177, 177, 177);
+  border-radius: 25px;
+}
+
+.button {
+  border-top: solid 1px #ccc;
+  display: flex;
+  justify-content: center;
+}
+.btndelete {
+  margin-top: 10px;
+  width: 200px;
+  height: 20px;
+  background-color: rgb(51, 65, 85);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: auto;
+}
+
+.btndelete:hover {
+  background-color: #475569;
+  cursor: pointer;
+  transition-duration: 0.15s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btndelete:active {
+  position: relative;
+  top: 1px;
+}
+
+@-webkit-keyframes spaceboots {
+  0% {
+    -webkit-transform: translate(2px, 1px) rotate(0deg);
+  }
+  10% {
+    -webkit-transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    -webkit-transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    -webkit-transform: translate(0px, 2px) rotate(0deg);
+  }
+  40% {
+    -webkit-transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    -webkit-transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    -webkit-transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    -webkit-transform: translate(2px, 1px) rotate(-1deg);
+  }
+  80% {
+    -webkit-transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    -webkit-transform: translate(2px, 2px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+.shake {
+  display: inline-block;
+  -webkit-animation-name: spaceboots;
+  -webkit-animation-duration: 0.8s;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-animation-timing-function: linear;
+  animation: spaceboots 0.3s ease-in-out;
+}
+
+@media (max-width: 750px) {
+  body {
+    margin: 8px;
+    object-fit: cover;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .content {
+    margin: 0;
+    z-index: 0;
+  }
+}

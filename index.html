@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../04Notepad/img/note-2-128.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <title>Notepad | © 2023 Niklas Tibbe</title>
+  </head>
+  <body onload="newnote()">
+    <div class="content dnone" id="notepad">
+      <header>
+        <p>ADD NEW NOTE</p>
+        <img
+          src="../04Notepad/img/x-mark-32.png"
+          onclick="closenotepad()"
+          class="close"
+        />
+      </header>
+      <form action="#">
+        <div class="rowtitle">
+          <label for="">Title</label>
+          <textarea name="" id="title" cols="30" rows="1"></textarea>
+        </div>
+        <div class="rowdescription">
+          <label for="">Description</label>
+          <textarea name="" id="description" cols="30" rows="10"></textarea>
+        </div>
+        <button id="savebutton" class="btnadd" onclick="checknote();">
+          ADD NOTE
+        </button>
+      </form>
+    </div>
+    <div class="wrapper">
+      <div class="addpad">
+        <div class="addpadframe">
+          <button class="addframebtn" onclick="opennotepad()">+</button>
+          <div class="addpadtxt">ADD NEW NOTE</div>
+        </div>
+      </div>
+      <div class="addednote" id="note"></div>
+    </div>
+  </body>
+</html>
